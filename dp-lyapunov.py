@@ -5,7 +5,7 @@ Calculation and visualization of average maximum lyapunov exponent for a double 
 Created for Extended Essay
 "Effect of pendulum mass on the chaos motion of a double pendulum"
 
-Original code from the source above has been used in Lines 27-64
+Original code from the source below has been used in Lines 27-64
 'The double pendulum problem' by matplotlib.org
 https://matplotlib.org/stable/gallery/animation/double_pendulum.html
 Accessed 3 Aug 2021
