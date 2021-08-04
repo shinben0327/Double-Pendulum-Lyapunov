@@ -124,16 +124,16 @@ for mass1 in tqdm(M1_array, desc='M1 loop'):
 
 # convert to Pandas DataFrame
 final_result = pd.DataFrame(result_2d_matrix, M1_array, M2_array)
-print(final_result)
 
 # create heatmap
-plt.subplots(figsize=(24,18))
-heat_map = sns.heatmap(final_result, annot=False)
+plt.subplots(figsize=(20,16))
+heat_map = sns.heatmap(final_result, annot=False, square=True, cbar_kws={'label': 'Lyapunov exponent'})
 heat_map.set_xticklabels(heat_map.get_xticklabels(), rotation=90, horizontalalignment='center')
+cbar_axes = heat_map.figure.axes[-1].yaxis.label.set_size(20)
 
-plt.xlabel("M2 (kg)")
-plt.ylabel("M1 (kg)")
-heat_map.xaxis.tick_top()
-heat_map.xaxis.set_label_position('top')
+plt.title("Average maximum Lyapunov exponent for different mass combinations", fontsize=20)
+plt.xlabel("M2 (kg)", fontsize=20)
+plt.ylabel("M1 (kg)", fontsize=20)
+plt.gca().invert_yaxis()
 
 plt.show()
