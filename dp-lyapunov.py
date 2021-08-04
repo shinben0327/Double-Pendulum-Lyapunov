@@ -105,15 +105,15 @@ for i in range(1, 61):
 
 # make an array of angles to be used for average lyapunov exponent calculation
 angles_array = []
-for i in range(1, 10):
+for i in range(1, 11):
     angles_array.append(float(i) * 10.0)
 
 result_2d_matrix = []
 
 # calculate the average maximum lyapunov exponent for all initial values
-for mass1 in tqdm(M1_array):
+for mass1 in tqdm(M1_array, desc='M1 loop'):
     temp_result = []
-    for mass2 in M2_array:
+    for mass2 in tqdm(M2_array, desc='M2 loop', leave=False):
         lyapunov_sum = 0
         for angle in angles_array:
             diff_list = trajectory_difference(angle, angle, mass1, mass2, 0.01)
@@ -127,7 +127,7 @@ final_result = pd.DataFrame(result_2d_matrix, M1_array, M2_array)
 print(final_result)
 
 # create heatmap
-plt.subplots(figsize=(12,9))
+plt.subplots(figsize=(24,18))
 heat_map = sns.heatmap(final_result, annot=False)
 heat_map.set_xticklabels(heat_map.get_xticklabels(), rotation=90, horizontalalignment='center')
 
