@@ -4,8 +4,7 @@ Calculation and visualization of average maximum Lyapunov exponent for a double 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-This project was made for the Extended Essay "Effect of pendulum mass on the chaos motion of a double system". \
-The Extended Essay can be read from the pdf file included within this project. \
+This project was made for the Extended Essay "Effect of pendulum mass on the chaos motion of a double system", which can be read [here](https://github.com/shinben0327/Double-Pendulum-Lyapunov/blob/053e2cf24e3ef20fbb500136340aa87c97f12045/Effect%20of%20pendulum%20mass%20on%20the%20chaos%20motion%20of%20a%20double%20pendulum%20-%20Jihwan%20Shin.pdf). \
 The program calculates and visualizes the average maximum Lyapunov exponent for a double pendulum system with varying initial masses of 0.5-30.0kg for the primary and secondary pendulums. \
 Running the program will create a heatmap for all combinations of masses. To download the results as a csv file, use final_result.to_csv('dp_result.csv') after the data frame has been made.
 
